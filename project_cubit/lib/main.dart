@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_cubit/Presentation/loading_view.dart';
 import 'Presentation/initial_view.dart';
 import 'Presentation/failure_view.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: FailureView(),
+      home: LoadingView(),
     );
   }
 }
