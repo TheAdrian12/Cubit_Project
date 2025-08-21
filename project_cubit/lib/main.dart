@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'Presentation/initial_view.dart';
+import 'Presentation/failure_view.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: initial_view(),
+      home: FailureView(),
     );
   }
 }
