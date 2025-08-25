@@ -2,36 +2,33 @@ import 'package:flutter/material.dart';
 
 class FailureView extends StatelessWidget {
   final String message;
-  const FailureView({this.message = "Error desconocido", Key? key}) : super(key: key);
+  final bool isBloc; 
+
+  const FailureView({
+    super.key,
+    required this.message,
+    this.isBloc = true,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(24.0),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(Icons.error_outline, size: 80, color: Colors.red.shade700),
-            const SizedBox(height: 20),
-            Text(
-              '¡Ups! Algo salió mal',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.red.shade700,
-              ),
-              textAlign: TextAlign.center,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Icon(Icons.error, color: Colors.red, size: 80),
+          const SizedBox(height: 16),
+          Text(
+            message,
+            style: const TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: Colors.red,
             ),
-            const SizedBox(height: 12),
-            Text(
-              message,
-              style: const TextStyle(fontSize: 16, color: Colors.black87),
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 20),
-          ],
-        ),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 24),
+        ],
       ),
     );
   }

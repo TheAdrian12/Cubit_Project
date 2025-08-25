@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project_cubit/Presentation/loading_view.dart';
-import 'package:project_cubit/Presentation/succes_view.dart';
-import 'Presentation/initial_view.dart';
-import 'Presentation/failure_view.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:project_cubit/presentation/initial_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,8 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      home: SuccessView(data: 'Datos Cargados con Exito'),
+      title: 'Manual de Usuario',
+      debugShowCheckedModeBanner: false,
+      home: const InitialView(),
     );
   }
 }

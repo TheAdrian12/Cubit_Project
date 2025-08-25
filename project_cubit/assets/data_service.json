@@ -1,0 +1,15 @@
+{
+  "celular": {
+    "marca": "Samsung",
+    "modelo": "Galaxy S24",
+    "sistema": "Android 14"
+  },
+  "manual": {
+    "introduccion": "Este es el manual de usuario del dispositivo.",
+    "instrucciones": [
+      "Presione el botón de encendido durante 3 segundos.",
+      "Deslice hacia arriba para desbloquear la pantalla.",
+      "Use el cargador original para mayor duración de la batería."
+    ]
+  }
+}
